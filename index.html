@@ -384,8 +384,8 @@ const CARDS = [
   {
     id: 'pista',
     icon: '✅',
-    title: 'Pista',
-    desc: 'Checklist de inventario y carga por evento.',
+    title: 'Checklist',
+    desc: 'Inventario y carga por evento.',
     url: 'https://lapkr-pista.vercel.app'
   },
   {
@@ -402,6 +402,14 @@ const CARDS = [
     desc: 'Captura rápida pre-grid.',
     url: 'https://lapkr-presiones.vercel.app',
     badge: 'beta · local'
+  },
+  {
+    id: 'tareas',
+    icon: '📋',
+    title: 'Tareas',
+    desc: 'Task Command — tareas personales y del equipo.',
+    url: 'https://tareas-dashboard.vercel.app',
+    badge: 'equipo independiente'
   }
 ];
 
@@ -495,7 +503,7 @@ async function bootstrapTeamDoc(user) {
       [strEmail]: {
         name: user.displayName || strEmail,
         rol: 'admin',
-        tarjetas: ['bitacora', 'pista', 'telemetry', 'presiones'],
+        tarjetas: ['bitacora', 'pista', 'telemetry', 'presiones', 'tareas'],
         addedAt: new Date().toISOString(),
         addedBy: strEmail
       }
