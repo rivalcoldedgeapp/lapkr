@@ -389,6 +389,13 @@ const CARDS = [
     url: 'https://lapkr-pista.vercel.app'
   },
   {
+    id: 'cronometro',
+    icon: '⏱',
+    title: 'Cronómetro',
+    desc: 'Tiempos en vivo de pilotos en pista, hasta 4 carriles.',
+    url: 'https://lapkr-cronometro.vercel.app'
+  },
+  {
     id: 'telemetry',
     icon: '📊',
     title: 'Telemetry',
@@ -505,7 +512,7 @@ async function bootstrapTeamDoc(user) {
       [strEmail]: {
         name: user.displayName || strEmail,
         rol: 'admin',
-        tarjetas: ['bitacora', 'pista', 'telemetry', 'presiones', 'tareas'],
+        tarjetas: ['bitacora', 'pista', 'cronometro', 'telemetry', 'presiones', 'tareas'],
         addedAt: new Date().toISOString(),
         addedBy: strEmail
       }
