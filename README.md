@@ -30,14 +30,19 @@ const BOOTSTRAP_ADMIN_EMAIL = "ricrodsan37@gmail.com";
 
 ## Apps que el dashboard apunta
 
-| Tarjeta | URL |
-|---|---|
-| Bitácora | `https://lapkr-bitacora.vercel.app` |
-| Pista | `https://lapkr-pista.vercel.app` |
-| Telemetry | `https://lapkr-telemetry.vercel.app` |
-| Presiones | `https://lapkr-presiones.vercel.app` |
+| Tarjeta | URL | Notas |
+|---|---|---|
+| Bitácora | `https://lapkr-bitacora.vercel.app` | |
+| Checklist | `https://lapkr-pista.vercel.app` | Antes "Pista" |
+| Telemetry | `https://lapkr-telemetry.vercel.app` | |
+| Presiones | `https://lapkr-presiones.vercel.app` | Local-only por ahora · pendiente migrar a Firebase |
+| Tareas | `https://tareas-dashboard.vercel.app` | Equipo independiente (no usa `config/lapkr-team`) |
 
 Si alguna URL cambia, editar el array `CARDS` dentro de `index.html`.
+
+### Nota sobre Tareas
+
+Tareas usa su propio modelo de equipo (`workspaces/{uid}.team`), separado del doc unificado `config/lapkr-team`. El checkbox "Tareas" en el modal de equipo del dashboard solo controla **visibilidad de la tarjeta**, no el acceso real a la app. Para dar acceso real, hay que agregar al usuario dentro de la propia app de Tareas.
 
 ## Estado actual
 
